@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<%- include('../partials/header', {title: 'Home Page'}); %>
+
+<body>
+    <% include ../partials/navbar %>
+
+    <div class="container">
+        <h1>Create Birds</h1>
+
+        <form method="POST" action="/birds/create">
+            <div class="form-group row">
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Species</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control form-control-sm" id="species" placeholder="species" Name="species">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Status</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="status" placeholder="status" Name="status">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">NickName</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control form-control-lg" id="nickName" placeholder="NickName" Name="nickName">
+                </div>
+              </div>
+
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </form>
+
+
+    </div>
+
+    <% include ../partials/scripts %>
+</body>
+
+</html>
